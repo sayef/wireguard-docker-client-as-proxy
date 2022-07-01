@@ -26,9 +26,9 @@ docker run -it --name wgproxy -e TZ=UTC -p 3128:3128 --cap-add=NET_ADMIN  wgprox
 
 - Example 2
 
-```
-export HTTPS_PROXY=localhost:3128
-export KUBECONFIG=/some/cluster/kube/config
+  ```
+  export HTTPS_PROXY=localhost:3128
+  export KUBECONFIG=/some/cluster/kube/config
 
-kubectl get pods
-```
+  kubectl get pods
+  ```
