@@ -16,8 +16,19 @@ docker run -it --name wgproxy -e TZ=UTC -p 3128:3128 --cap-add=NET_ADMIN  wgprox
 
 ## Test
 
-```
-curl https://google.com -x localhost:3128
+- Example 1
 
-# Note: ping doesn't support proxy
+  ```
+  curl https://google.com -x localhost:3128
+
+  # Note: ping doesn't support proxy
+  ```
+
+- Example 2
+
+```
+export HTTPS_PROXY=localhost:3128
+export KUBECONFIG=/some/cluster/kube/config
+
+kubectl get pods
 ```
